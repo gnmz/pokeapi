@@ -1,0 +1,45 @@
+.main-page {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.main-page__pokemon-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 70%;
+  margin: 0 auto;
+}
+
+.pokemon-card {
+  margin: 10px auto;
+  border: 1px solid black;
+  text-align: center;
+  width: 90%;
+}
+
+.pokemon-card:hover {
+  color: rgb(52, 168, 83);
+  cursor: pointer;
+  border-color: rgb(52, 168, 83);
+}
+
+.pokemon-card__title {
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 320px) and (max-width: 991px) {
+  .main-page__pokemon-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (max-width: 600px) {
+  .main-page__pokemon-list {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 5px;
+  }
+  .pokemon-card {
+    margin: 5px;
+  }
+}
